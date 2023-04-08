@@ -1,1 +1,84 @@
-site_name: My Docs
+site_name: My Learning Hub
+
+nav:
+  - Introduction: 'index.md'
+  - Software:
+      - Git:
+          - Notes: './docs/software/git/git-notes.md'
+          - CheatSheet: './docs/software/git/git-cheatsheet.md'
+
+  - Maths:
+    - Index: './Maths/mathIndex.md'
+    - Counting: './Maths/counting.md'
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - toc.integrate
+    - navigation.top
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: en
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+      primary: teal
+      accent: purple
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+      primary: teal
+      accent: lime
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/rajpal-virk/study-notes
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/RajpalVirk3754
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/rajpal-virk/
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - tables
+
+plugins:
+  - glightbox
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+
+copyright: |
+  &copy; 2023 <a href="https://github.com/rajpal-virk/study-notes"  target="_blank" rel="noopener">Notebook</a>
