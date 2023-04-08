@@ -4,12 +4,8 @@ nav:
   - Introduction: 'index.md'
   - Software:
       - Git:
-          - Notes: './docs/software/git/git-notes.md'
-          - CheatSheet: './docs/software/git/git-cheatsheet.md'
-
-  - Maths:
-    - Index: './Maths/mathIndex.md'
-    - Counting: './Maths/counting.md'
+          - Notes: './software/git/git-notes.md'
+          - CheatSheet: './software/git/git-cheatsheet.md'
 
 theme:
   name: material
