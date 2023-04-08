@@ -40,11 +40,13 @@
 ```shell
 cd <working-dir-path>
 git init
-git add .
-git commit -m 'First  commit'
 git branch -M main
 git remote add origin <ssh@your-remote-repo>
-git push -u origin main
+git pull origin main
+git checkout -b dev # at this point you can checkout main branch to dev branch so main stays unchanged
+git add .
+git commit -m 'First  commit'
+git push -u origin dev
 ```
 2. From existing remote (GitHub) repo to local repo
 ```shell
