@@ -224,6 +224,11 @@ git checkout earlier-commit-id -- path-to-file
 ```
 - case 2 - all files to be reverted back to earlier commit to modify, commit and push
 ```shell
-
+# first checkout ealier commit as hard reset
+git reset --hard <commit-id>
+# now make new changes and then pull latest changes with --no-ff
+git pull --no-ff
+# this will show conflict between newly edited changes and earlier file versions
+# select to resolve conflict and then select "keep yours changes"
+# then commit and push
 ```
-this is after hard reset
