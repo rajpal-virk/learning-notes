@@ -232,3 +232,5 @@ git pull --no-ff
 # select to resolve conflict and then select "keep yours changes"
 # then commit and push
 ```
+
+# test entry
