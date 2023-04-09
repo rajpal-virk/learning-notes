@@ -233,6 +233,8 @@ git checkout dev
 # merge new changes to dev will raise conflicts
 # resolve conflicts as "Accept theirs" - Theirs means of test branch, yours mean dev branch
 # after resolving conflicts, commit and push to remote
+# delete test branch after merging
+git branch -d test
 ```
 
 
