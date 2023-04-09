@@ -122,8 +122,11 @@ git restore --staged --worktree <filename> # restore both indexed file and worki
 - deletes commits after the roll-back commit point
 - if you push to remote then you might see conflicts since remote has earlier commits but local does not.
 ```shell
+git reset # move file from staging area but changes are still in working tree. so add file again before committing
 git reset --soft <commit-id> # roll back to earlier commit but leave changed files as modified in staging area
+git reset --sorft HEAD~1 # use HEAD~ some number to roll back that many commits
 git reset --hard <commit-id> # roll back to earlier commit and change files too 
+git reset --mixed <commit-id> # roll back to earlier commit and change index files but not working tree. before commit add files again
 ```
 
 
