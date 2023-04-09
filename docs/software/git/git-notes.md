@@ -219,6 +219,8 @@ git stash show # show stashed changes
 ```shell
 # this will revert back files to earlier commits and then you can make new changes, commit and push
 git revert <commitID>
+# if it asks you to resolve conflicts, then "Yours" = in local repo - that should not be selected
+# "theirs" = in ealier commit, where we want to revert to. so make sure to select "Accept theirs"
 ```
 
 - case 2 - only couple of files to revert, modify and push
