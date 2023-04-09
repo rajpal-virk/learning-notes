@@ -222,9 +222,23 @@ git checkout earlier-commit-id -- path-to-file
 # this will revert only mentioned file to earlier commit
 # now change file and commit and push to remote again
 ```
-- case 2 - all files to be reverted back to earlier commit to modify, commit and push
+
+- case 2 - soft reset - all files to be reverted back to earlier commit to modify, commit and push
 ```shell
-# first checkout ealier commit as hard reset
+# first checkout earlier commit to new branch - test 
+git checkout -b test <commit-id>
+# make new changes
+# go back to main or dev branch
+git checkout dev
+# merge new changes to dev will raise conflicts
+# resolve conflicts as "Accept theirs" - Theirs means of test branch, yours mean dev branch
+# after resolving conflicts, commit and push to remote
+```
+
+
+- case 3 - hard reset - all files to be reverted back to earlier commit to modify, commit and push
+```shell
+# first checkout earlier commit as hard reset
 git reset --hard <commit-id>
 # now make new changes and then pull latest changes with --no-ff
 git pull --no-ff
@@ -232,3 +246,4 @@ git pull --no-ff
 # select to resolve conflict and then select "keep yours changes"
 # then commit and push
 ```
+
