@@ -233,3 +233,4 @@ git pull --no-ff
 # then commit and push
 ```
 # soft reset tested
+#new edition
