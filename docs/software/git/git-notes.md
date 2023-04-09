@@ -19,7 +19,8 @@
 - head: pointer that determines the branch or commits that last checked out
 - working tree: current working directory
 - index: git staging area where user commits new changes
-
+- staging-area: before git add, the tracked files will appear modified. after git add, indexed files are staged.
+- reflog: reference-logs
 
 <br>
 
@@ -124,16 +125,90 @@ git restore --staged --worktree <filename> # restore both indexed file and worki
 ```shell
 git reset # move file from staging area but changes are still in working tree. so add file again before committing
 git reset --soft <commit-id> # roll back to earlier commit but leave changed files as modified in staging area
-git reset --sorft HEAD~1 # use HEAD~ some number to roll back that many commits
+git reset --soft HEAD~1 # use HEAD~ some number to roll back that many commits
 git reset --hard <commit-id> # roll back to earlier commit and change files too 
 git reset --mixed <commit-id> # roll back to earlier commit and change index files but not working tree. before commit add files again
 ```
 
+### Reset vs Restore
+- files changed after commit = modified
+- modified files are tracked but still need to add to staging-area = file is indexed but unstaged
+- git add modified-file to add to staging area = file is in staged 
+- git restore file will not restore file if it is already in staged area
+  - run git reset on file to get file back to unstaged area first
+  - then run git restore on file to revert changes back or run
+  - git restore --staged or if you want to change both staged and worktree file, run
+  - git restore --staged --worktree
+- reset if used alone will just unstage files but reset with --soft/--hard commit-id/head~number will move head
 
+
+### Remove files
+- git rm will remove files from working tree and index
+- if you simply delete files, they are removed from working tree but not index
+- simple delete means file is deleted and you will see it as deleted in git status
+
+```shell
+git rm <filename>
+```
+
+### Rename files
+- git mv will do following steps
+  - make copy of original file and rename it
+  - delete original file with old filename
+
+```shell
+git mv <original-file> <new-file>
+```
+
+## Branching and Merging
+
+### Branch
+```shell
+git branch <new-branch-name>
+
+# during listing, use --merged or --no-merged to see merged/not-merged branches
+git branch -l
+git branch -a
+git branch -r
+git branch -d
+git branch -D
+git branch -m
+git branch -c # copy including reflog and config
+
+git branch -u # --set-upstream; if no branchname passed, take current branch as default
+git branch --unset-upstream # if no branchname passed, take current branch as default
+
+
+```
+### checkout
+- move head and update working-tree
+```shell
+git checkout <branchname>
+git checkout -b <branchname> <commitID>
+```
+
+### Merge
+- checkout a new feature branch from existing main
+- update changes in new feature branch
+- checkout main branch
+- run git merge feature-branch-name
+```shell
+git merge <branchname>
+git merge --commit <branchname>
+```
 
 ### Log
 
 ```shell
+git log --oneline # current branch
+git log --oneline --all # all branches
 git log --graph --abbrev-commit --decorate --date=relative --all # shows nice graph with author and relative date
+```
 
+### Stash
+- stash changes in working tree and index to use later and
+- revert back to clean working tree
+```shell
+git stash list # list entries
+git stash show # show stashed changes
 ```
