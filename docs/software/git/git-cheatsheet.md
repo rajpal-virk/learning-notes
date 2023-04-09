@@ -44,3 +44,6 @@ git status -l
 - git reset --mixed <commit-id> # head moved and files unchanged but un-indexed
 - 
 
+
+
+AFADFADFA
