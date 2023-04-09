@@ -227,3 +227,4 @@ git checkout earlier-commit-id -- path-to-file
 
 ```
 this is test file now
+this is soft reset

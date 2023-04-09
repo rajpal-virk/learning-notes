@@ -43,3 +43,4 @@ git status -l
 - git reset --hard <commit-id> # head moved, all changes reverted
 - git reset --mixed <commit-id> # head moved and files unchanged but un-indexed
 - 
+
