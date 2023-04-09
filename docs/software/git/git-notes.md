@@ -214,7 +214,14 @@ git stash show # show stashed changes
 ```
 
 ## Remote Revert Changes
-- case1 - only couple of files to revert, modify and push
+
+- case 1 - using git revert (PREFERRED)
+```shell
+# this will revert back files to earlier commits and then you can make new changes, commit and push
+git revert <commitID>
+```
+
+- case 2 - only couple of files to revert, modify and push
 
 ```shell
 # pull latest commit from remote
@@ -223,7 +230,7 @@ git checkout earlier-commit-id -- path-to-file
 # now change file and commit and push to remote again
 ```
 
-- case 2 - soft reset - all files to be reverted back to earlier commit to modify, commit and push
+- case 3 - soft reset - all files to be reverted back to earlier commit to modify, commit and push
 ```shell
 # first checkout earlier commit to new branch - test 
 git checkout -b test <commit-id>
@@ -236,7 +243,7 @@ git checkout dev
 ```
 
 
-- case 3 - hard reset - all files to be reverted back to earlier commit to modify, commit and push
+- case 4 - hard reset - all files to be reverted back to earlier commit to modify, commit and push
 ```shell
 # first checkout earlier commit as hard reset
 git reset --hard <commit-id>
@@ -247,8 +254,3 @@ git pull --no-ff
 # then commit and push
 ```
 
-- case 4 - using git revert 
-```shell
-# this will revert back files to earlier commits and then you can make new changes, commit and push
-git revert <commitID>
-```
