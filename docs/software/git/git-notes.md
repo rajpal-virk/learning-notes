@@ -247,3 +247,8 @@ git pull --no-ff
 # then commit and push
 ```
 
+- case 4 - using git revert 
+```shell
+# this will revert back files to earlier commits and then you can make new changes, commit and push
+git revert <commitID>
+```
