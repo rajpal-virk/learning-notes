@@ -226,4 +226,4 @@ git checkout earlier-commit-id -- path-to-file
 ```shell
 
 ```
-this is test file now
+this is after hard reset
