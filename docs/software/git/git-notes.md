@@ -247,4 +247,3 @@ git pull --no-ff
 # then commit and push
 ```
 
-- case 4 - test
