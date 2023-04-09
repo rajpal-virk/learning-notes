@@ -3,4 +3,4 @@
 # testing git reset soft
 # make new changes
 
-ADFADSFAS
+# git revert tested
