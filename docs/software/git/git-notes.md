@@ -212,3 +212,17 @@ git log --graph --abbrev-commit --decorate --date=relative --all # shows nice gr
 git stash list # list entries
 git stash show # show stashed changes
 ```
+
+## Remote Revert Changes
+- case1 - only couple of files to revert, modify and push
+
+```shell
+# pull latest commit from remote
+git checkout earlier-commit-id -- path-to-file
+# this will revert only mentioned file to earlier commit
+# now change file and commit and push to remote again
+```
+- case 2 - all files to be reverted back to earlier commit to modify, commit and push
+```shell
+
+```
