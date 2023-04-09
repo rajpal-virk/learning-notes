@@ -37,7 +37,7 @@ theme:
 extra:
   social:
     - icon: fontawesome/brands/github-alt
-      link: https://github.com/rajpal-virk/study-notes
+      link: https://github.com/rajpal-virk/learning-notes
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/RajpalVirk3754
     - icon: fontawesome/brands/linkedin
@@ -77,4 +77,4 @@ extra_javascript:
 
 
 copyright: |
-  &copy; 2023 <a href="https://github.com/rajpal-virk/study-notes"  target="_blank" rel="noopener">Notebook</a>
+  &copy; 2023 <a href="https://github.com/rajpal-virk/learning-notes"  target="_blank" rel="noopener">Notebook</a>
