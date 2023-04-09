@@ -121,4 +121,16 @@ git restore --staged --worktree <filename> # restore both indexed file and worki
 - rolling back project to earlier commit
 - deletes commits after the roll-back commit point
 - if you push to remote then you might see conflicts since remote has earlier commits but local does not.
-- 
+```shell
+git reset --soft <commit-id> # roll back to earlier commit but leave changed files as modified in staging area
+git reset --hard <commit-id> # roll back to earlier commit and change files too 
+```
+
+
+
+### Log
+
+```shell
+git log --graph --abbrev-commit --decorate --date=relative --all # shows nice graph with author and relative date
+
+```
