@@ -213,7 +213,7 @@ git stash list # list entries
 git stash show # show stashed changes
 ```
 
-## Remote Revert Changes
+## Remote Revert Changes (Revert)
 
 - case 1 - using git revert (PREFERRED)
 ```shell
